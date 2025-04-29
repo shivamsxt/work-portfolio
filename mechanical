@@ -1,0 +1,106 @@
+import { useState } from "react";
+import Typical from "react-typical";
+
+export default function Portfolio() {
+  return (
+    <div className="bg-white text-gray-800 min-h-screen p-6">
+      {/* Header Section */}
+      <header className="flex flex-col items-center justify-center h-screen text-center">
+        <h1 className="text-4xl md:text-6xl font-bold mb-4">Shivam Singh</h1>
+        <Typical
+          steps={["Design Engineer", 1500, "CAD Specialist", 1500, "Mechanical Engineer", 1500]}
+          loop={Infinity}
+          wrapper="h2"
+          className="text-2xl md:text-3xl text-gray-600"
+        />
+        <a
+          href="/assets/Shivam_Singh_Resume.pdf"
+          download
+          className="mt-6 px-6 py-2 bg-blue-600 text-white rounded-full shadow hover:bg-blue-700"
+        >
+          Download Resume
+        </a>
+      </header>
+
+      {/* About Section */}
+      <section id="about" className="py-10">
+        <h2 className="text-3xl font-bold mb-4">About Me</h2>
+        <p>
+          I am a passionate design engineer with expertise in AutoCAD and SolidWorks,
+          specializing in mechanical modeling and technical drawings. I seek challenging
+          opportunities to apply my skills in engineering.
+        </p>
+      </section>
+
+      {/* Skills Section */}
+      <section id="skills" className="py-10">
+        <h2 className="text-3xl font-bold mb-4">Skills</h2>
+        <ul className="grid grid-cols-2 md:grid-cols-3 gap-4">
+          <li>SolidWorks</li>
+          <li>AutoCAD</li>
+          <li>Creo</li>
+          <li>Ansys</li>
+          <li>FEA</li>
+          <li>Mechanical Engineering</li>
+        </ul>
+      </section>
+
+      {/* Projects Section */}
+      <section id="projects" className="py-10">
+        <h2 className="text-3xl font-bold mb-4">Projects</h2>
+        <div className="grid md:grid-cols-2 gap-6">
+          <div className="border rounded-lg p-4 shadow">
+            {/* Replace src with your image later */}
+            <img
+              src="/assets/images/project-placeholder.png"
+              alt="Project Placeholder"
+              className="mb-4 w-full h-48 object-cover rounded"
+            />
+            <h3 className="text-xl font-semibold">Magnetic Abrasive Finishing (MAF)</h3>
+            <p className="mt-2">
+              Developed a high-quality mirror-like finish on stainless steel using MAF techniques, 
+              leading the team to optimize surface finish.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Experience Section */}
+      <section id="experience" className="py-10">
+        <h2 className="text-3xl font-bold mb-4">Experience</h2>
+        <div>
+          <h3 className="text-xl font-semibold">Design Engineer, Servokon Systems Limited</h3>
+          <p className="text-gray-600">October 2024 - Present</p>
+          <ul className="list-disc ml-6 mt-2">
+            <li>Created GA and GT drawings of transformers using AutoCAD.</li>
+            <li>Developed 3D models in SolidWorks, improving design efficiency.</li>
+            <li>Introduced 3D modeling workflow, increasing innovation.</li>
+          </ul>
+        </div>
+        <div className="mt-6">
+          <h3 className="text-xl font-semibold">Mechanical Workshop Trainee, North Eastern Railway</h3>
+          <p className="text-gray-600">June 2023 - July 2023</p>
+          <ul className="list-disc ml-6 mt-2">
+            <li>Worked on LHB bogie maintenance and design.</li>
+          </ul>
+        </div>
+      </section>
+
+      {/* Certifications Section */}
+      <section id="certifications" className="py-10">
+        <h2 className="text-3xl font-bold mb-4">Certifications</h2>
+        <ul className="list-disc ml-6">
+          <li>Industrial Training Certificate - North Eastern Railway</li>
+          <li>AutoCAD & SolidWorks - Internshala</li>
+        </ul>
+      </section>
+
+      {/* Contact Section */}
+      <section id="contact" className="py-10">
+        <h2 className="text-3xl font-bold mb-4">Contact</h2>
+        <p>Email: <a href="mailto:shivam.work@icloud.com" className="text-blue-600">shivam.work@icloud.com</a></p>
+        <p>LinkedIn: <a href="https://linkedin.com/in/shivamsxt" className="text-blue-600">linkedin.com/in/shivamsxt</a></p>
+      </section>
+    </div>
+  );
+}
